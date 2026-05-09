@@ -3,9 +3,11 @@ package com.spring.java.controller;
 import com.spring.java.dto.EmployeeRequest;
 import com.spring.java.dto.EmployeeResponse;
 import com.spring.java.dto.ApiResponse;
+import com.spring.java.entity.Employee;
 import com.spring.java.service.EmployeeService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -99,6 +101,14 @@ public class EmployeeController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+//     findAllByOrderByFirstName
+
+    @GetMapping("/findAllByOrderByFirstName")
+    public List<Employee> findAllByOrderByFirstName(){
+        return employeeService.findAllByOrderByFirstName();
+    }
+
 
 
 }

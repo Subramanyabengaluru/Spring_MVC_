@@ -82,4 +82,10 @@ public class EmployeeService {
 
         return "Employee deleted successfully with id: " + empId;
     }
+
+    public List<Employee> findAllByOrderByFirstName() {
+        return employeeRepo.findAllByOrderByFirstName();
+    }
+
+
 }
