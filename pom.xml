@@ -76,6 +76,24 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<!-- Redis Caching -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+
+		<!-- Jedis Client for Redis Connection Pooling -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+		</dependency>
+
+		<!-- Spring Cache -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
